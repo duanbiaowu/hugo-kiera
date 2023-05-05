@@ -1,6 +1,6 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="{{ .Site.Params.description | default "The HTML5 Herald" }}" />
+<meta name="description" content="{{ .Site.Params.description | default .Summary }}" />
 <meta name="author" content="{{ .Params.Author | default .Site.Author.name }}" />
 <link rel="shortcut icon" href="{{ "/favicon.ico" | absURL }}" type="image/x-icon" />
 {{- with .OutputFormats.Get "rss" -}}
