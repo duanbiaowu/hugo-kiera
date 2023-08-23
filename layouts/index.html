@@ -7,9 +7,9 @@
     {{ range $index, $page := $paginator.Pages }}
 
     <li {{if eq $index 0}}class="first" {{end}}>
-      <h1><a href="{{ $page.Permalink }}" title="{{ $page.Title }}">{{ .Title }}</a></h1>
-      {{ partial "aside" . }}
-      <p>{{ .Summary }}</p>
+      <h1><a href="{{ $page.Permalink }}" title="{{ $page.Title }}">{{ .Title }}</a>
+      <time class="article-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006-01-02" }}</time>
+      </h1>
     </li>
     {{ end }}
   </ul>

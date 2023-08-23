@@ -1,8 +1,9 @@
 {{ if .Params.tags }}
-<li>
+<p>
+    {{ .Date.Format "2006-01-02" }} &nbsp;&nbsp;
     {{ range $i, $t := .Params.tags }}
     {{ if $i }}{{ end }}
-    <a href="{{ relLangURL ( printf "tags/%s" ( $t | urlize ) ) }}">{{ $t }}</a>
+    <a class="article-tag" href="{{ relLangURL ( printf "tags/%s" ( $t | urlize ) ) }}">{{ $t }}</a>
     {{ end }}
-</li>
+</p>
 {{ end }}
